@@ -117,7 +117,7 @@ async function askAI(question) {
     throw new Error("AI service is not configured.");
   }
   const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
-  const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+  const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash-lite" });
 
   const prompt = `Answer the following question in a single word only. Do not add punctuation, explanation, or extra words.\n\nQuestion: ${question}`;
 
